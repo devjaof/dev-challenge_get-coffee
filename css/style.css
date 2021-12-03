@@ -72,7 +72,9 @@ button {
     margin: 40px;
     padding: 20px;
 }
-
+button:active {
+    background-color: #FCA10F;
+}
 footer {
     display: flex;
     justify-content: center;
