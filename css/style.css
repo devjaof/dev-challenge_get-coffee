@@ -27,8 +27,9 @@ header {
     box-shadow: 0px 2px 5px lightgray;
 }
 
+
 .logotipo {
-    width: 50%;
+    width: 70%;
     margin-left: 20%;
     margin-right: 25%;
     margin-top: 5%;
@@ -50,9 +51,24 @@ li {
     color: #242424;
 }
 
+@media screen and (min-width: 1280px){
+    header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav {
+        align-items: center;
+        margin-right: 50px;
+        font-size: 1.2em;
+    }
+}
+
 main {
     display: flex;
     flex-direction: column;
+
+    margin: auto;
 }
 
 .chamada {
@@ -66,16 +82,50 @@ main {
     color: #242424;
 }
 
+.imgcopo {
+    display: none;
+}
+
 button {
     background-color: #FCA60F;
     border-radius: 10px;
     margin: 40px;
     padding: 20px;
+    color: #FFFFFF;
 }
 button:active {
-    background-color: #FCA10F;
-    box-shadow: 0px 2px 5px lightgray;
+    background-color: #f1b450;
+    box-shadow: 0px 2px 5px rgb(155, 155, 155);
 }
+
+@media screen and (min-width: 1280px){
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .chamada {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    button {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+
+    .imgcopo {
+        display: flex;
+        align-self: flex-end;
+        justify-self: center;
+
+        width: 40%;
+        
+    }
+
+}
+
 footer {
     display: flex;
     justify-content: center;
@@ -87,5 +137,28 @@ footer {
 
 footer div img {
     padding: 5px;
+
+    position: absolute;
 }
 
+.desktopfooter {
+    display: none;
+}
+
+@media screen and (min-width: 1280px){
+    .icons {
+        display: none;
+    }
+
+    .desktopfooter {
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-end;
+    }
+
+    .desktopfooter p {
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+    }
+}
